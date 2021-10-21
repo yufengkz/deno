@@ -2,7 +2,7 @@ import { Application, Router } from 'https://deno.land/x/oak/mod.ts'
 
 const router = new Router()
 
-// const contentType = 'application/json; charset=UTF-8'
+const contentType = 'application/json; charset=UTF-8'
 router
     .get('/index', context => {
         context.response.body = `This is a Blog!  ${moment().format('YYYY-MM-DD')}`
