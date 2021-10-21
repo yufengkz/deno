@@ -1,10 +1,9 @@
 const router = new Router()
 
 // const contentType = 'application/json; charset=UTF-8'
-// router
-//     .get('/index', context => {
-//         context.response.body = `This is a Blog!  ${moment().format('YYYY-MM-DD')}`
-//     })
+router.get('/index', context => {
+    context.response.body = `This is a Blog!  ${moment().format('YYYY-MM-DD')}`
+})
 //     .get('/api/:id', context => {
 //         const { pathname } = new URL(request.url)
 //         if (pathname.startsWith('/api')) {
