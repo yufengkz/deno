@@ -2,7 +2,7 @@ const router = new Router()
 
 const contentType = 'application/json; charset=UTF-8'
 router
-    .get('/', context => {
+    .get('/index', context => {
         context.response.body = `This is a Blog!  ${moment().format('YYYY-MM-DD')}`
     })
     .get('/api/:id', context => {
@@ -11,9 +11,6 @@ router
             const data = JSON.parse(Deno.readTextFileSync('./static/data.json'))
             const id = context.params.id
             console.log(`url params id => ${id}`)
-            const json = JSON.stringify({
-                message: 'First deno demo'
-            })
 
             if (context.params && context.params.id && data[id]) {
                 if (data[id].expiryDate) {
