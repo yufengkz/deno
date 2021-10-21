@@ -61,5 +61,5 @@ app.use(async (context, next) => {
 
 const port = 9000
 console.log(`> Listening on http://localhost:${port}`)
-await app.listen({ port })
+await app.listen({ port: port })
 console.log('REEEEEE')
